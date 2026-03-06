@@ -1,0 +1,20 @@
+{
+  "name": "HI Connect",
+  "short_name": "HI Connect",
+  "start_url": "/Connect-v2/?id=jessica",
+  "display": "standalone",
+  "background_color": "#0f0f10",
+  "theme_color": "#1f8f3a",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

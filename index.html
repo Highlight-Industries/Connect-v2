@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>HI | Connect</title>
+
+  <meta name="theme-color" content="#1F8F3A" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="HI Connect" />
+
+  <link rel="manifest" href="./site.webmanifest" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+
+    <section class="view view--desktop" aria-label="Desktop contact card">
+      <div class="desk-shell">
+        <div class="desk-mock">
+          <header class="desk-header">
+            <div class="desk-search">
+              <label class="sr-only" for="employeeSearch">Search employees</label>
+              <input id="employeeSearch" type="search" placeholder="Search employee…" autocomplete="off" />
+              <button id="openBtn" class="btn btn--solid" type="button">Open</button>
+              <button id="clearBtn" class="btn btn--ghost" type="button">Clear</button>
+            </div>
+          </header>
+
+          <main class="desk-overlay">
+            <button id="deskSaveHit" class="desk-hit desk-hit--save" type="button" aria-label="Save to Contacts"></button>
+            <button id="deskShareHit" class="desk-hit desk-hit--share" type="button" aria-label="Share Contact"></button>
+
+            <div class="desk-photo" aria-label="Employee photo">
+              <img id="deskPhoto" alt="Employee headshot" />
+            </div>
+
+            <div class="desk-info">
+              <div class="desk-name" id="deskName">Loading…</div>
+              <div class="desk-title" id="deskTitle"></div>
+
+              <div class="desk-meta">
+                <div class="meta-row">
+                  <span class="meta-label">Phone</span>
+                  <a id="deskPhone" href="#" class="meta-value"></a>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-label">Email</span>
+                  <a id="deskEmail" href="#" class="meta-value"></a>
+                </div>
+                <div class="meta-row">
+                  <span class="meta-label">Web</span>
+                  <a id="deskWeb" href="https://www.highlightindustries.com" target="_blank" rel="noopener" class="meta-value">highlightindustries.com</a>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <section class="view view--mobile" aria-label="Mobile contact card">
+      <div class="mob-shell">
+        <div class="mob-mock">
+          <div class="mob-portrait" aria-label="Employee photo">
+            <img id="mobPhoto" alt="Employee photo" />
+          </div>
+
+          <div class="mob-qrCircle" aria-label="QR code">
+            <img id="mobQr" alt="QR code" />
+          </div>
+
+          <a id="mobCallHit" class="mob-hit mob-hit--call" href="#" aria-label="Call"></a>
+          <a id="mobEmailHit" class="mob-hit mob-hit--email" href="#" aria-label="Email"></a>
+          <a id="mobWebHit" class="mob-hit mob-hit--web" href="#" target="_blank" rel="noopener" aria-label="Website"></a>
+
+          <header class="mob-top"></header>
+
+          <main class="mob-main">
+            <div class="mob-hero">
+              <div class="mob-details" aria-label="Employee details">
+                <div class="mob-titleblock">
+                  <div class="mob-name" id="mobName">Loading…</div>
+                  <div class="mob-role" id="mobTitle"></div>
+                </div>
+
+                <div class="mob-row">
+                  <div class="mob-k">Phone</div>
+                  <div class="mob-v"><a id="mobPhone" href="#"></a></div>
+                </div>
+                <div class="mob-row">
+                  <div class="mob-k">Email</div>
+                  <div class="mob-v"><a id="mobEmail2" href="#"></a></div>
+                </div>
+                <div class="mob-row">
+                  <div class="mob-k">Office</div>
+                  <div class="mob-v">Grand Rapids, MI</div>
+                </div>
+              </div>
+            </div>
+          </main>
+
+          <nav class="mob-bottombar" aria-label="Bottom actions">
+            <button id="mobAddBtn" class="pill pill--solid" type="button" aria-label="Add contact">
+              <span class="pill-ic">＋</span><span class="pill-tx">Add Contact</span>
+            </button>
+            <button id="mobShareBtn" class="pill" type="button" aria-label="Share">
+              <span class="pill-ic">↗</span><span class="pill-tx">Share</span>
+            </button>
+            <button id="mobDirectoryBtn" class="pill" type="button" aria-label="Find employees">
+              <span class="pill-ic">⌕</span><span class="pill-tx">Find</span>
+            </button>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close="1"></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal__head">
+        <div class="modal__title" id="modalTitle">Share</div>
+        <button class="modal__x" type="button" data-close="1" aria-label="Close">✕</button>
+      </div>
+      <div class="modal__body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
