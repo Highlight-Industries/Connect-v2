@@ -107,8 +107,9 @@ a{color:inherit}
   .pill{padding:11px 8px}
   .pill-tx{font-size:13px}
 }
-/* Hide desktop search bar for v1 */
+/* Hide search/find for v1 */
 .desk-header,
-.desk-search {
+.desk-search,
+#mobDirectoryBtn {
   display: none !important;
 }
