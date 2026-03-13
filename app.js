@@ -158,7 +158,13 @@ if (els.mobBooth) {
   if (els.mobEmail2) { els.mobEmail2.textContent = email || "—"; els.mobEmail2.href = buildMailHref(email); }
 
   if (els.mobQr) els.mobQr.src = qrImgUrl(cardUrl);
-  if (els.mobCallHit) els.mobCallHit.href = telHref;
+  if (els.mobCallHit) {
+  els.mobCallHit.href = telHref;
+  els.mobCallHit.onclick = function(e){
+    e.preventDefault();
+    window.top.location.href = telHref;
+  };
+}
   if (els.mobEmailHit) els.mobEmailHit.href = buildMailHref(email);
   if (els.mobWebHit) els.mobWebHit.href = webUrl;
 }
