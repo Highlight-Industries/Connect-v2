@@ -71,7 +71,7 @@ a{color:inherit}
 .mob-main{
   position:absolute;
   inset:0;
-  padding:352px 18px 235px; /* more real space above bottom bar */
+  padding:390px 18px 190px;
   display:flex;
   flex-direction:column;
   gap:14px;
@@ -96,8 +96,8 @@ a{color:inherit}
 .mob-hit--email{left:calc(var(--qr-cx) + (var(--qr-size) * 1.09) - 22px);top:calc(var(--qr-cy) + (var(--qr-size) * .20) - 22px)}
 .mob-hit--web{left:calc(var(--qr-cx) + (var(--qr-size) * 1.50) - 22px);top:calc(var(--qr-cy) + (var(--qr-size) * .20) - 22px)}
 .mob-details{
-  margin-top:45px;
-  margin-bottom:10px; /* let container padding do the work */
+  margin-top:0;
+  margin-bottom:0;
   position:relative;
   z-index:3;
   background:rgba(0,0,0,.20);
@@ -125,7 +125,7 @@ a{color:inherit}
   position:absolute;
   left:14px;
   right:14px;
-  bottom:18px; /* a little lower */
+  bottom:12px;
   padding:12px;
   border-radius:22px;
   background:rgba(255,255,255,.14);
@@ -151,7 +151,7 @@ a{color:inherit}
 .emp-item{padding:12px;border-radius:16px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);cursor:pointer}.emp-sub{opacity:.78;font-weight:600;font-size:13px;margin-top:3px}
 
 @media (max-width:390px){
-  .mob-main{padding:330px 14px 235px}
+  .mob-main{padding:370px 14px 185px}
   .mob-portrait{width:158px;height:158px}
   .mob-name{font-size:30px}
   .pill{padding:11px 8px}
