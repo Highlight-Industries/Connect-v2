@@ -69,21 +69,27 @@ a{color:inherit}
 
 .mob-mock{
   width:min(420px,96vw);
-  height:min(860px,92svh);
   min-height:820px;
   position:relative;
   border-radius:30px;
   overflow:visible;
   box-shadow:var(--shadow);
-  background:url("./assets/Mobile%20Template.svg") center/cover no-repeat;
+  background:url("./assets/Mobile%20Template.svg") center top / cover no-repeat;
 
+  /* QR position */
   --qr-cx:23.2%;
   --qr-cy:43.9%;
   --qr-size:min(132px,34vw);
 
+  /* icon button centers from the new mockup */
+  --icon-y:45.4%;
+  --call-x:49.6%;
+  --email-x:69.1%;
+  --web-x:88.5%;
+
+  /* card spacing */
   --details-top:54%;
   --details-bottom-gap:118px;
-  touch-action:pan-y;
 }
 
 .mob-main{
@@ -151,24 +157,25 @@ a{color:inherit}
   display:block;
   width:44px;
   height:44px;
-  border-radius:14px;
+  border-radius:999px;
   background:transparent;
   z-index:120;
+  transform:translate(-50%,-50%);
 }
 
 .mob-hit--call{
-  left:calc(var(--qr-cx) + (var(--qr-size) * .67) - 22px);
-  top:calc(var(--qr-cy) + (var(--qr-size) * .20) - 22px);
+  left:var(--call-x);
+  top:var(--icon-y);
 }
 
 .mob-hit--email{
-  left:calc(var(--qr-cx) + (var(--qr-size) * 1.09) - 22px);
-  top:calc(var(--qr-cy) + (var(--qr-size) * .20) - 22px);
+  left:var(--email-x);
+  top:var(--icon-y);
 }
 
 .mob-hit--web{
-  left:calc(var(--qr-cx) + (var(--qr-size) * 1.50) - 22px);
-  top:calc(var(--qr-cy) + (var(--qr-size) * .20) - 22px);
+  left:var(--web-x);
+  top:var(--icon-y);
 }
 
 .mob-details{
