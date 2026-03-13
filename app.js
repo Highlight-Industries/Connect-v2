@@ -296,6 +296,24 @@ function wireUI() {
     if (t instanceof HTMLElement && t.dataset.close === "1") closeModal();
   });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+  // Safari tap fix
+els.mobCallHit?.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (!current?.phone) return;
+  window.location.href = buildTelHref(current.phone);
+});
+
+els.mobEmailHit?.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (!current?.email) return;
+  window.location.href = buildMailHref(current.email);
+});
+
+els.mobWebHit?.addEventListener("click", (e) => {
+  e.preventDefault();
+  const url = current ? safeWebUrl(current) : WEBSITE_URL;
+  window.open(url, "_blank", "noopener");
+});
 }
 
 async function init() {
