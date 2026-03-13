@@ -73,7 +73,7 @@ a{color:inherit}
   min-height:820px;
   position:relative;
   border-radius:30px;
-  overflow:hidden;
+  overflow:visible;
   box-shadow:var(--shadow);
   background:url("./assets/Mobile%20Template.svg") center/cover no-repeat;
 
