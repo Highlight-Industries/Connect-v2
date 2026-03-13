@@ -83,9 +83,9 @@ a{color:inherit}
 
   /* icon button centers from the new mockup */
   --icon-y:45.4%;
-  --call-x:49.6%;
-  --email-x:69.1%;
-  --web-x:88.5%;
+  --call-x:47%;
+  --email-x:67%;
+  --web-x:90%;
 
   /* card spacing */
   --details-top:54%;
@@ -155,8 +155,8 @@ a{color:inherit}
 .mob-hit{
   position:absolute;
   display:block;
-  width:44px;
-  height:44px;
+  width:36px;
+  height:36px;
   border-radius:999px;
   background:transparent;
   z-index:120;
