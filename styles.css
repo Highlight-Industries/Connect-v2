@@ -241,11 +241,10 @@ a{color:inherit}
 .mob-main{
   position:absolute;
   inset:0;
-  padding:352px 18px 170px;
+  padding:352px 18px 200px;
   display:flex;
   flex-direction:column;
   gap:14px;
-  justify-content:center;
 }
 
 .mob-hero{
