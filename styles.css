@@ -174,17 +174,15 @@ a{color:inherit}
   left:18px;
   right:18px;
   top:var(--details-top);
-  bottom:var(--details-bottom-gap);
   margin:0;
   z-index:90;
+  max-height:calc(100% - var(--details-top) - var(--details-bottom-gap));
   background:rgba(0,0,0,.20);
   border:1px solid rgba(255,255,255,.14);
   border-radius:20px;
   padding:12px 14px;
   backdrop-filter:blur(10px);
-  overflow:hidden;
 }
-
 .mob-name{
   font-size:34px;
   font-weight:900;
