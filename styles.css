@@ -59,11 +59,12 @@ a{color:inherit}
 ========================= */
 
 .mob-shell{
-  min-height:100vh;
+  min-height:100svh;
   display:flex;
   align-items:center;
   justify-content:center;
   padding:18px;
+  touch-action:pan-y;
 }
 
 .mob-mock{
@@ -80,9 +81,9 @@ a{color:inherit}
   --qr-cy:43.9%;
   --qr-size:min(132px,34vw);
 
-  /* layout anchors */
   --details-top:54%;
   --details-bottom-gap:118px;
+  touch-action:pan-y;
 }
 
 .mob-main{
@@ -90,6 +91,7 @@ a{color:inherit}
   inset:0;
   display:block;
   padding:0;
+  touch-action:pan-y;
 }
 
 .mob-hero{
@@ -178,6 +180,8 @@ a{color:inherit}
   z-index:90;
 
   max-height:calc(100% - var(--details-top) - var(--details-bottom-gap));
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
 
   background:rgba(0,0,0,.20);
   border:1px solid rgba(255,255,255,.14);
