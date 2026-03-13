@@ -166,6 +166,7 @@ a{color:inherit}
 .mob-hit--call{
   left:var(--call-x);
   top:var(--icon-y);
+   z-index:130;
 }
 
 .mob-hit--email{
