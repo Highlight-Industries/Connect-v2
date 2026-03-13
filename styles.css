@@ -152,33 +152,6 @@ a{color:inherit}
   display:block;
 }
 
-.mob-hit{
-  position:absolute;
-  display:block;
-  width:36px;
-  height:36px;
-  border-radius:999px;
-  background:transparent;
-  z-index:120;
-  transform:translate(-50%,-50%);
-}
-
-.mob-hit--call{
-  left:var(--call-x);
-  top:var(--icon-y);
-   z-index:130;
-}
-
-.mob-hit--email{
-  left:var(--email-x);
-  top:var(--icon-y);
-}
-
-.mob-hit--web{
-  left:var(--web-x);
-  top:var(--icon-y);
-}
-
 .mob-details{
   position:absolute;
   left:18px;
