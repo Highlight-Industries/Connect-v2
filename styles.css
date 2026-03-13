@@ -176,7 +176,9 @@ a{color:inherit}
   top:var(--details-top);
   margin:0;
   z-index:90;
+
   max-height:calc(100% - var(--details-top) - var(--details-bottom-gap));
+
   background:rgba(0,0,0,.20);
   border:1px solid rgba(255,255,255,.14);
   border-radius:20px;
