@@ -245,6 +245,7 @@ a{color:inherit}
   display:flex;
   flex-direction:column;
   gap:14px;
+  justify-content:center;
 }
 
 .mob-hero{
