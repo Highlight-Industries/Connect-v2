@@ -305,9 +305,9 @@ a{color:inherit}
 .mob-hit{
   position:absolute;
   display:block;
-  width:64px;
-  height:64px;
-  border-radius:18px;
+  width:48px;
+  height:48px;
+  border-radius:16px;
   background:transparent;
   z-index:300;
   pointer-events:auto;
@@ -317,18 +317,18 @@ a{color:inherit}
 
 /* Adjusted to sit farther right over the 3 icons */
 .mob-hit--call{
-  left:calc(var(--qr-cx) + (var(--qr-size) * .74) - 32px);
-  top:calc(var(--qr-cy) + (var(--qr-size) * .22) - 32px);
+  left:calc(var(--qr-cx) + (var(--qr-size) * .70) - 24px);
+  top:calc(var(--qr-cy) + (var(--qr-size) * .22) - 24px);
 }
 
 .mob-hit--email{
-  left:calc(var(--qr-cx) + (var(--qr-size) * 1.16) - 32px);
-  top:calc(var(--qr-cy) + (var(--qr-size) * .22) - 32px);
+  left:calc(var(--qr-cx) + (var(--qr-size) * 1.12) - 24px);
+  top:calc(var(--qr-cy) + (var(--qr-size) * .22) - 24px);
 }
 
 .mob-hit--web{
-  left:calc(var(--qr-cx) + (var(--qr-size) * 1.58) - 32px);
-  top:calc(var(--qr-cy) + (var(--qr-size) * .22) - 32px);
+  left:calc(var(--qr-cx) + (var(--qr-size) * 1.60) - 24px);
+  top:calc(var(--qr-cy) + (var(--qr-size) * .22) - 24px);
 }
 
 .mob-details{
