@@ -230,26 +230,23 @@ a{color:inherit}
   min-height:calc(100dvh - 36px);
   position:relative;
   border-radius:30px;
-  overflow:visible;
+  overflow:hidden;
   box-shadow:var(--shadow);
   background:url("./assets/Mobile%20Template.svg") center/cover no-repeat;
   --qr-cx:23.2%;
   --qr-cy:43.9%;
   --qr-size:min(132px,34vw);
-  padding-bottom:calc(100px + env(safe-area-inset-bottom));
 }
 
 .mob-main{
   position:relative;
-  padding:352px 18px 24px;
+  padding:392px 18px 150px; /* pushes details below QR + icons */
   display:block;
-  overflow:visible;
 }
 
 .mob-hero{
   position:relative;
-  height:260px;
-  background:none;
+  height:0;
   overflow:visible;
 }
 
@@ -335,8 +332,7 @@ a{color:inherit}
 }
 
 .mob-details{
-  margin-top:45px;
-  margin-bottom:20px;
+  margin-top:0;
   position:relative;
   z-index:3;
   background:rgba(0,0,0,.20);
@@ -400,11 +396,10 @@ a{color:inherit}
 }
 
 .mob-bottombar{
-  position:sticky;
-  left:auto;
-  right:auto;
-  bottom:calc(12px + env(safe-area-inset-bottom));
-  margin:0 14px calc(14px + env(safe-area-inset-bottom));
+  position:absolute;
+  left:14px;
+  right:14px;
+  bottom:14px;
   padding:12px;
   border-radius:22px;
   background:rgba(255,255,255,.14);
@@ -435,152 +430,10 @@ a{color:inherit}
 .pill--solid{background:var(--green)}
 .pill-tx{letter-spacing:.2px}
 
-/* =========================
-   Modal
-========================= */
-
-.modal{
-  position:fixed;
-  inset:0;
-  display:none;
-  z-index:5000;
-}
-
-.modal.is-open{display:block}
-
-.modal__backdrop{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.55);
-}
-
-.modal__panel{
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  width:min(520px,92vw);
-  border-radius:22px;
-  overflow:hidden;
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(20,20,20,.92);
-  box-shadow:0 22px 65px rgba(0,0,0,.55);
-}
-
-.modal__head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:14px 14px 12px;
-  border-bottom:1px solid rgba(255,255,255,.10);
-}
-
-.modal__title{
-  font-weight:900;
-  font-size:18px;
-}
-
-.modal__x{
-  width:38px;
-  height:34px;
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(255,255,255,.08);
-  color:#fff;
-  cursor:pointer;
-}
-
-.modal__body{padding:14px}
-
-.card{
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(255,255,255,.06);
-  border-radius:18px;
-  padding:14px;
-}
-
-.card + .card{margin-top:12px}
-
-.share-grid{
-  display:grid;
-  grid-template-columns:160px 1fr;
-  gap:14px;
-}
-
-.qrbox{
-  border-radius:18px;
-  background:rgba(255,255,255,.10);
-  border:1px solid rgba(255,255,255,.14);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:10px;
-}
-
-.qrbox img{
-  width:140px;
-  height:140px;
-  object-fit:contain;
-  background:#fff;
-  border-radius:12px;
-  padding:6px;
-}
-
-.share-actions{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-.small{
-  font-size:13px;
-  opacity:.78;
-}
-
-.list{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-
-.list button{
-  width:100%;
-  text-align:left;
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-}
-
-.emp-item{
-  padding:12px;
-  border-radius:16px;
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(255,255,255,.06);
-  cursor:pointer;
-}
-
-.emp-sub{
-  opacity:.78;
-  font-weight:600;
-  font-size:13px;
-  margin-top:3px;
-}
-
-/* =========================
-   Small phones
-========================= */
-
 @media (max-width:390px){
-  .mob-main{padding:330px 14px 20px}
+  .mob-main{padding:378px 14px 145px}
   .mob-portrait{width:158px;height:158px}
   .mob-name{font-size:30px}
   .pill{padding:11px 8px}
   .pill-tx{font-size:13px}
-}
-
-/* Hide search/find for v1 */
-.desk-header,
-.desk-search,
-#mobDirectoryBtn{
-  display:none !important;
 }
