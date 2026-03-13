@@ -116,6 +116,7 @@ function renderEmployee(emp) {
   current = emp;
   const full = `${emp.first || ""} ${emp.last || ""}`.trim() || "Employee";
   const title = emp.title || "";
+  const booth = (emp.booth || "").trim();
   const phoneDisp = buildPhoneDisplay(emp.phone, emp.phone_ext);
   const telHref = buildTelHref(emp.phone);
   const email = emp.email || "";
@@ -129,6 +130,25 @@ function renderEmployee(emp) {
   if (els.deskTitle) els.deskTitle.textContent = title;
   if (els.mobName) els.mobName.textContent = full;
   if (els.mobTitle) els.mobTitle.textContent = title;
+  if (els.deskBooth) {
+  if (booth) {
+    els.deskBooth.textContent = `Booth: ${booth}`;
+    els.deskBooth.hidden = false;
+  } else {
+    els.deskBooth.textContent = "";
+    els.deskBooth.hidden = true;
+  }
+}
+
+if (els.mobBooth) {
+  if (booth) {
+    els.mobBooth.textContent = `Booth: ${booth}`;
+    els.mobBooth.hidden = false;
+  } else {
+    els.mobBooth.textContent = "";
+    els.mobBooth.hidden = true;
+  }
+}
 
   if (els.deskPhone) { els.deskPhone.textContent = phoneDisp || "—"; els.deskPhone.href = telHref; }
   if (els.deskEmail) { els.deskEmail.textContent = email || "—"; els.deskEmail.href = buildMailHref(email); }
