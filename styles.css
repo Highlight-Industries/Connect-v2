@@ -307,7 +307,6 @@ a{color:inherit}
 .share-actions{display:flex;flex-direction:column;gap:10px}.small{font-size:13px;opacity:.78}.list{display:flex;flex-direction:column;gap:8px}.list button{width:100%;text-align:left;display:flex;justify-content:space-between;gap:10px}
 .emp-item{padding:12px;border-radius:16px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);cursor:pointer}.emp-sub{opacity:.78;font-weight:600;font-size:13px;margin-top:3px}
 
-@media (max-width:390px){ .mob-main{padding:370px 14px 185px} .mob-portrait{width:158px;height:158px} .mob-name{font-size:30px} .pill{padding:11px 8px} .pill-tx{font-size:13px} }
 /* Hide search/find for v1 */
 .desk-header,
 .desk-search,
