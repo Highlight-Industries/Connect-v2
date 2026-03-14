@@ -311,16 +311,25 @@ function wireUI() {
   els.mobShareBtn?.addEventListener("click", async () => {
   if (!current) return;
 
+  const fullName = `${current.first_name} ${current.last_name}`;
+  const shareUrl = `${window.location.origin}${window.location.pathname}#${current.id}`;
+
   try {
     if (navigator.share) {
-      const fullName = `${current.first_name} ${current.last_name}`;
-
-await navigator.share({
-  title: fullName,
-  text: `${fullName} – ${current.title}`,
-  url: window.location.href
-});
+      await navigator.share({
+        title: fullName,
+        text: `${fullName} – ${current.title} | Highlight Industries`,
+        url: shareUrl
+      });
       return; // stop here if native share worked
+    }
+  } catch (err) {
+    if (err.name === "AbortError") return;
+  }
+
+  // fallback if native share isn't supported
+  openShareModal(current);
+});
     }
   } catch (err) {
     // If user cancels the share menu, do nothing
