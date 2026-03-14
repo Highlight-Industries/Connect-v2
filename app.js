@@ -308,7 +308,15 @@ function wireUI() {
   els.employeeSearch?.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); els.openBtn?.click(); } });
   els.clearBtn?.addEventListener("click", () => { if (els.employeeSearch) els.employeeSearch.value = ""; toast("Cleared."); });
   els.mobAddBtn?.addEventListener("click", () => current && downloadVCard(current));
-  els.mobShareBtn?.addEventListener("click", () => current && openShareModal(current));
+  els.mobShareBtn?.addEventListener("click", async () => {
+  if (!current) return;
+
+  const shared = await nativeShare(current);
+
+  if (!shared) {
+    openShareModal(current); // fallback if native share isn't supported
+  }
+});
   els.mobDirectoryBtn?.addEventListener("click", openDirectoryModal);
   document.addEventListener("click", (e) => {
     const t = e.target;
