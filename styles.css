@@ -290,11 +290,16 @@ a{color:inherit}
 }
 
 .mob-k{
-  opacity:.75;
+  color:#000;
   font-weight:700;
 }
 
+.mob-v{
+  color:#000;
+}
+
 .mob-v a{
+  color:#000;
   text-decoration:none;
   font-weight:800;
 }
