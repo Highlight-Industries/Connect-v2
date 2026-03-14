@@ -311,7 +311,7 @@ function wireUI() {
 els.mobShareBtn?.addEventListener("click", async () => {
   if (!current) return;
 
-  const fullName = current.name || `${current.first_name || ""} ${current.last_name || ""}`.trim();
+  const fullName = current.employee_name;
   const shareUrl = `https://www.highlightindustries.net/pages/connect#${current.id}`;
 
   try {
