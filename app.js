@@ -313,11 +313,13 @@ function wireUI() {
 
   try {
     if (navigator.share) {
-      await navigator.share({
-        title: current.name,
-        text: `${current.name} – ${current.title}`,
-        url: current.url
-      });
+      const fullName = `${current.first_name} ${current.last_name}`;
+
+await navigator.share({
+  title: fullName,
+  text: `${fullName} – ${current.title}`,
+  url: window.location.href
+});
       return; // stop here if native share worked
     }
   } catch (err) {
