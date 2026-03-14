@@ -308,10 +308,14 @@ function wireUI() {
   els.employeeSearch?.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); els.openBtn?.click(); } });
   els.clearBtn?.addEventListener("click", () => { if (els.employeeSearch) els.employeeSearch.value = ""; toast("Cleared."); });
   els.mobAddBtn?.addEventListener("click", () => current && downloadVCard(current));
-els.mobShareBtn?.addEventListener("click", async () => {
+  els.mobShareBtn?.addEventListener("click", async () => {
   if (!current) return;
 
-  const fullName = current.employee_name;
+  const fullName =
+    document.querySelector(".mob-name")?.textContent?.trim() ||
+    document.querySelector(".desk-name")?.textContent?.trim() ||
+    "Highlight Industries";
+
   const shareUrl = `https://www.highlightindustries.net/pages/connect#${current.id}`;
 
   try {
@@ -321,7 +325,7 @@ els.mobShareBtn?.addEventListener("click", async () => {
         text: `${fullName} – ${current.title} | Highlight Industries`,
         url: shareUrl
       });
-      return;
+      return; // stop if native share worked
     }
   } catch (err) {
     if (err.name === "AbortError") return;
@@ -329,7 +333,6 @@ els.mobShareBtn?.addEventListener("click", async () => {
 
   openShareModal(current);
 });
-
 
 els.mobDirectoryBtn?.addEventListener("click", openDirectoryModal);
   document.addEventListener("click", (e) => {
