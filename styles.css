@@ -295,13 +295,14 @@ a{color:inherit}
 }
 
 .mob-v{
-  color:#000;
+  color:#444;
+  font-weight:500;
 }
 
 .mob-v a{
-  color:#000;
+  color:#444;
   text-decoration:none;
-  font-weight:800;
+  font-weight:500;
 }
 
 .mob-bottombar{
