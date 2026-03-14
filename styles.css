@@ -350,6 +350,12 @@ a{color:inherit}
   color:#fff;
   overflow:visible;
 }
+.pill-ic--share svg{
+  width:26px;
+  height:26px;
+  display:block;
+  color:#fff;
+}
 
 @media (max-width:390px){
   .mob-mock{
