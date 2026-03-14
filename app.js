@@ -311,8 +311,8 @@ function wireUI() {
   els.mobShareBtn?.addEventListener("click", async () => {
   if (!current) return;
 
-  const fullName = `${current.first_name} ${current.last_name}`;
-  const shareUrl = `${window.location.origin}${window.location.pathname}#${current.id}`;
+  const fullName = current.name;
+  const shareUrl = `https://www.highlightindustries.net/pages/connect#${current.id}`;
 
   try {
     if (navigator.share) {
@@ -321,22 +321,13 @@ function wireUI() {
         text: `${fullName} – ${current.title} | Highlight Industries`,
         url: shareUrl
       });
-      return; // stop here if native share worked
+      return; // stop if native share worked
     }
   } catch (err) {
     if (err.name === "AbortError") return;
   }
 
-  // fallback if native share isn't supported
-  openShareModal(current);
-});
-    }
-  } catch (err) {
-    // If user cancels the share menu, do nothing
-    if (err.name === "AbortError") return;
-  }
-
-  // Only show fallback if native share truly failed
+  // fallback for desktop or unsupported browsers
   openShareModal(current);
 });
   els.mobDirectoryBtn?.addEventListener("click", openDirectoryModal);
