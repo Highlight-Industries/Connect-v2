@@ -111,8 +111,16 @@
 
           <nav class="mob-bottombar" aria-label="Bottom actions">
             <button id="mobAddBtn" class="pill pill--solid" type="button" aria-label="Add contact">
-              <span class="pill-ic">＋</span><span class="pill-tx">Add Contact</span>
-            </button>
+  <span class="pill-ic pill-ic--add" aria-hidden="true">
+    <svg viewBox="0 0 64 64" focusable="false">
+      <circle cx="24" cy="24" r="14" fill="none" stroke="currentColor" stroke-width="4"/>
+      <path d="M10 50c2.5-8 9-12 14-12s11.5 4 14 12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="45" cy="43" r="11" fill="currentColor"/>
+      <path d="M45 38v10M40 43h10" fill="none" stroke="#1f8f3a" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+  </span>
+  <span class="pill-tx">Add Contact</span>
+</button>
             <button id="mobShareBtn" class="pill" type="button" aria-label="Share">
               <span class="pill-ic">↗</span><span class="pill-tx">Share</span>
             </button>
