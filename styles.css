@@ -252,6 +252,7 @@ a{color:inherit}
   font-size:34px;
   font-weight:900;
   line-height:1.02;
+  color:var(--green);
   text-shadow:0 10px 28px rgba(0,0,0,.55);
 }
 
@@ -270,9 +271,10 @@ a{color:inherit}
   line-height:1.1;
   opacity:.96;
   display:inline-block;
-  padding:3px 8px;
+  padding:4px 10px;
   border-radius:999px;
-  background:rgba(255,255,255,.16);
+  background:var(--green);
+  color:#fff;
 }
 
 .mob-row{
@@ -320,16 +322,18 @@ a{color:inherit}
   justify-content:center;
   gap:10px;
   border-radius:18px;
-  border:1px solid rgba(255,255,255,.16);
-  background:rgba(31,143,58,.30);
+  border:0;
+  background:linear-gradient(135deg,#1f8f3a 0%, #2aa64a 100%);
   color:#fff;
   padding:12px 10px;
   font-weight:800;
   cursor:pointer;
+  box-shadow:
+  inset 0 1px 0 rgba(255,255,255,.25),
+  0 4px 10px rgba(0,0,0,.18);
 }
-
-.pill--solid{
-  background:var(--green);
+.pill:hover{
+  filter:brightness(1.08);
 }
 
 .pill-tx{
