@@ -116,7 +116,7 @@ a{color:inherit}
 }
 
 .desk-name{
-  font-size:46px;
+  font-size:48px;
   font-weight:800;
   line-height:1;
   margin-right:20px;
@@ -127,14 +127,14 @@ a{color:inherit}
 
 .desk-title{
   margin-top:8px;
-  font-size:22px;
+  font-size:29px;
   font-weight:700;
   color:var(--green);
 }
 
 .desk-booth{
   margin-top:4px;
-  font-size:18px;
+  font-size:21px;
   font-weight:800;
   opacity:.82;
 }
