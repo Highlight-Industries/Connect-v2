@@ -150,9 +150,9 @@ a{color:inherit}
 .meta-row:last-child{
   border-bottom:none;
 }
-.meta-label{font-weight:700;opacity:.7 font-size:23px;
+.meta-label{font-weight:700;opacity:.7 font-size:20px;
 }
-.meta-value{font-weight:700;text-decoration:none font-size:21px;
+.meta-value{font-weight:700;text-decoration:none font-size:18px;
 }
 .desk-hit{position:absolute;border:0;background:transparent;cursor:pointer;z-index:6}
 .desk-hit--save{left:49%;top:79.5%;width:20%;height:10%;border-radius:999px}
