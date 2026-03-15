@@ -125,7 +125,7 @@ a{color:inherit}
   font-weight:800;
   opacity:.82;
 }
-.desk-meta{margin-top:28px;display:grid;gap:12px}
+.desk-meta{margin-top:25px;display:grid;gap:12px}
 .meta-row{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:14px;background:rgba(0,0,0,.06)}
 .meta-label{font-weight:700;opacity:.7}.meta-value{font-weight:700;text-decoration:none}
 .desk-hit{position:absolute;border:0;background:transparent;cursor:pointer;z-index:6}
