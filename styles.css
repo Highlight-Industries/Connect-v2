@@ -140,7 +140,16 @@ a{color:inherit}
 }
 }
 .desk-meta{margin-top:26px;display:grid;gap:9px}
-.meta-row{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:14px;background:rgba(0,0,0,.06)}
+.meta-row{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:14px 0;
+  border-bottom:1px solid rgba(0,0,0,.15);
+}
+.meta-row:last-child{
+  border-bottom:none;
+}
 .meta-label{font-weight:700;opacity:.7}.meta-value{font-weight:700;text-decoration:none}
 .desk-hit{position:absolute;border:0;background:transparent;cursor:pointer;z-index:6}
 .desk-hit--save{left:49%;top:79.5%;width:20%;height:10%;border-radius:999px}
