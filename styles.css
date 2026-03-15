@@ -96,23 +96,15 @@ a{color:inherit}
 .desk-info{
   position:absolute;
   left:53%;
-  top:19.5%;
+  top:17%;
   right:3%;
   color:#0b0b0b;
-  background:rgba(255,255,255,.80);
-  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.78);
+  border:1px solid rgba(255,255,255,.16);
   border-radius:22px;
-  padding:.desk-info{
-  position:absolute;
-  left:53%;
-  top:19.5%;
-  right:3%;
-  color:#0b0b0b;
-  background:rgba(255,255,255,.80);
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:22px;
-  padding:40px 50px 36px 50px;
+  padding:34px 42px 30px 42px;
   box-shadow:0 22px 55px rgba(0,0,0,.35);
+  backdrop-filter:blur(10px);
 }
 
 .desk-name{
@@ -122,37 +114,59 @@ a{color:inherit}
   margin-right:20px;
   max-width:90%;
   letter-spacing:-0.5px;
+  color:var(--green);
+
 
 }
 
 .desk-title{
   margin-top:8px;
-  font-size:29px;
+  font-size:22px;
   font-weight:700;
-  color:var(--green);
+  color:#f3f3f3;
 }
 
 .desk-booth{
-  margin-top:4px;
-  font-size:21px;
+  margin-top:10px;
+  display:inline-block;
+  padding:4px 12px;
+  border-radius:999px;
+  background:var(--green);
+  color:#fff;
+  font-size:16px;
   font-weight:800;
-  opacity:.82;
+  opacity:1;
 }
+.desk-meta{
+  margin-top:26px;
+  display:grid;
+  gap:0;
 }
-.desk-meta{margin-top:23px;display:grid;gap:9px}
+
 .meta-row{
   display:flex;
   justify-content:space-between;
   gap:12px;
-  padding:14px 0;
-  border-bottom:1px solid rgba(0,0,0,.15);
+  padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,.14);
+  background:none;
 }
+
 .meta-row:last-child{
   border-bottom:none;
 }
-.meta-label{font-weight:700;opacity:.7 font-size:20px;
+
+.meta-label{
+  color:#000;
+  font-weight:700;
+  font-size:18px;
 }
-.meta-value{font-weight:700;text-decoration:none font-size:18px;
+
+.meta-value{
+  color:#444;
+  font-weight:500;
+  text-decoration:none;
+  font-size:18px;
 }
 .desk-hit{position:absolute;border:0;background:transparent;cursor:pointer;z-index:6}
 .desk-hit--save{left:49%;top:79.5%;width:20%;height:10%;border-radius:999px}
