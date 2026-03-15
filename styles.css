@@ -102,7 +102,47 @@ a{color:inherit}
   background:rgba(255,255,255,.80);
   border:1px solid rgba(255,255,255,.18);
   border-radius:22px;
-  padding:42px 40px;
+  padding:.desk-info{
+  position:absolute;
+  left:53%;
+  top:19.5%;
+  right:3%;
+  color:#0b0b0b;
+  background:rgba(255,255,255,.80);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:22px;
+  padding:30px 40px 26px 40px;
+  box-shadow:0 22px 55px rgba(0,0,0,.35);
+}
+
+.desk-name{
+  font-size:46px;
+  font-weight:800;
+  line-height:1;
+}
+
+.desk-title{
+  margin-top:8px;
+  font-size:22px;
+  font-weight:700;
+  color:var(--green);
+}
+
+.desk-booth{
+  margin-top:4px;
+  font-size:18px;
+  font-weight:800;
+  opacity:.82;
+}
+}
+.desk-meta{margin-top:29px;display:grid;gap:10px}
+.meta-row{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:14px;background:rgba(0,0,0,.06)}
+.meta-label{font-weight:700;opacity:.7}.meta-value{font-weight:700;text-decoration:none}
+.desk-hit{position:absolute;border:0;background:transparent;cursor:pointer;z-index:6}
+.desk-hit--save{left:49%;top:79.5%;width:20%;height:10%;border-radius:999px}
+.desk-hit--share{left:73%;top:79.5%;width:20%;height:10%;border-radius:999px}
+
+/* =========================
   box-shadow:0 22px 55px rgba(0,0,0,.35);
 }
 
