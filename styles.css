@@ -113,6 +113,8 @@ a{color:inherit}
   color:var(--green);
   letter-spacing:-0.5px;
   margin:0;
+  text-shadow:0 3px 10px rgba(0,0,0,.4);
+
 }
 
 .desk-title{
